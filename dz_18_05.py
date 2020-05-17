@@ -20,3 +20,11 @@ with open('pars.txt', 'r') as f:
         if 'Safari' in text :
             saf += 1
 print('Safari = ', saf)
+
+get = 0
+with open('pars.txt', 'r') as f:
+    for text in f:
+        if 'GET' in text :
+            get += 1
+
+print('Количество запросов = ', get)
