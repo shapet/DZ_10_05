@@ -34,5 +34,6 @@ with open("C:\\Users\\smoke\Documents\\Python Scripts\\pars.txt","r") as file:
     text1 = file.read()
 Ip = re.compile('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}') 
 findIP = re.findall(Ip,text1) 
-findIP 
+a = set(findIP)
+print('Уникальных IP адресов = ', len(a))
 print('Количество IP адресов = ', len(findIP))
