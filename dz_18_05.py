@@ -29,8 +29,10 @@ with open('pars.txt', 'r') as f:
 
 print('Количество запросов = ', get)
 
-import re
+import re 
 with open("C:\\Users\\smoke\Documents\\Python Scripts\\pars.txt","r") as file: 
     text1 = file.read()
-Ip=re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}',text1)
-print('Количество IP адресов = ', len(Ip))
+Ip = re.compile('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}') 
+findIP = re.findall(Ip,text1) 
+findIP 
+print('Количество IP адресов = ', len(findIP))
